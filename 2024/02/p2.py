@@ -28,11 +28,7 @@ for line in lines:
         diffs.append(line[n] - line[(n+1)])
     if normalSafe(diffs):
         safes += 1
-        print(line)
-        print(diffs)
     elif problemDampener(line):
         safes += 1
-        print('dampened')
-        print(line)
 
 print(safes)
