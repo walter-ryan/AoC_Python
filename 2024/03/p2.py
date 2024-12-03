@@ -3,8 +3,7 @@ import re
 with open('2024/03/input.txt') as file:
     line = file.read()
 
-line = re.sub(r"\s",'',line)
-line = re.sub(r"don't\(\).*?do\(\)|don't\(\).*$",'',line)
+line = re.sub(r"(?s)don't\(\).*?do\(\)|don't\(\).*$",'',line)
 
 list = [x[4:-1].split(',') for x in re.findall(r"mul\(\d+,\d+\)", line)]
 
