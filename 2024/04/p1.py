@@ -3,15 +3,12 @@ with open('2024/04/input.txt') as file:
 
 widthRange = range(len(lines[0].strip()))
 heightRange = range(len(lines))
-print(widthRange)
-print(heightRange)
 xmasCount = 0
 # Find X
 for x in widthRange:
     for y in heightRange:
         if lines[y][x] == 'X':
             i, j = x, y
-            print('Testing ',i,j)
             # test up
             if i in heightRange and j - 1 in widthRange and lines[j-1][i] == 'M':
                 if i in heightRange and j - 2 in widthRange and lines[j-2][i] == 'A':
