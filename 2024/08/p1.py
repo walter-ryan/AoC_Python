@@ -1,6 +1,6 @@
 import string
 from itertools import combinations
-
+from tqdm import tqdm
 with open('2024/08/input.txt') as file:
     lines = [line.strip() for line in file.readlines()]
 
@@ -9,7 +9,7 @@ chars = set(string.ascii_letters) | set('1234567890')
 
 antinodes = set()
 
-for a in chars:
+for a in tqdm(chars):
     letter_positions = []
     for y in range(len(lines)):
         for x in range(len(lines[0])):
