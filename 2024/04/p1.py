@@ -11,16 +11,7 @@ def findMAS(xOff: int, yOff: int) -> bool:
             if i+3*xOff in heightRange and j+3*yOff in widthRange and lines[j+3*yOff][i+3*xOff] == 'S':
                 return True
     return False
-directions = [
-    (-1,1),
-    (0,1),
-    (1,1),
-    (-1,0),
-    (1,0),
-    (-1,-1),
-    (0,-1),
-    (1,-1)
-]
+directions = [(-1,1), (0,1), (1,1), (-1,0), (1,0), (-1,-1), (0,-1), (1,-1)]
 # Find X
 for x in widthRange:
     for y in heightRange:
